@@ -3,7 +3,7 @@ namespace GitShop.Migrations
     using System;
     using System.Data.Entity.Migrations;
     
-    public partial class GitShopMigration : DbMigration
+    public partial class Test : DbMigration
     {
         public override void Up()
         {
@@ -15,8 +15,11 @@ namespace GitShop.Migrations
                         Name = c.String(nullable: false, maxLength: 256),
                         Category = c.String(nullable: false, maxLength: 256),
                         Price = c.String(nullable: false, maxLength: 256),
+                        User_Id = c.Int(),
                     })
-                .PrimaryKey(t => t.Id);
+                .PrimaryKey(t => t.Id)
+                .ForeignKey("dbo.Users", t => t.User_Id)
+                .Index(t => t.User_Id);
             
             CreateTable(
                 "dbo.Users",
@@ -24,20 +27,17 @@ namespace GitShop.Migrations
                     {
                         Id = c.Int(nullable: false, identity: true),
                         Name = c.String(nullable: false, maxLength: 256),
-                        LastName = c.String(nullable: false, maxLength: 256),
+                        Password = c.String(nullable: false, maxLength: 256),
                         Role = c.String(nullable: false, maxLength: 256),
-                        Product_Id = c.Int(),
                     })
-                .PrimaryKey(t => t.Id)
-                .ForeignKey("dbo.Products", t => t.Product_Id)
-                .Index(t => t.Product_Id);
+                .PrimaryKey(t => t.Id);
             
         }
         
         public override void Down()
         {
-            DropForeignKey("dbo.Users", "Product_Id", "dbo.Products");
-            DropIndex("dbo.Users", new[] { "Product_Id" });
+            DropForeignKey("dbo.Products", "User_Id", "dbo.Users");
+            DropIndex("dbo.Products", new[] { "User_Id" });
             DropTable("dbo.Users");
             DropTable("dbo.Products");
         }

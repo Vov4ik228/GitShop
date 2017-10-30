@@ -16,11 +16,11 @@ namespace GitShop.Entities
         public string Name { get; set; }
 
         [Required, StringLength(maximumLength: 256)]
-        public string LastName { get; set; }
+        public string Password { get; set; }
 
         [Required, StringLength(maximumLength: 256)]
         public string Role { get; set; }
 
-        public Product Product { get; set; }
+        public ICollection<Product> Product { get; set; }
     }
 }

@@ -7,13 +7,13 @@ namespace GitShop.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.2.0-61023")]
-    public sealed partial class GitShopMigration : IMigrationMetadata
+    public sealed partial class Test : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(GitShopMigration));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(Test));
         
         string IMigrationMetadata.Id
         {
-            get { return "201710301328389_GitShopMigration"; }
+            get { return "201710301427571_Test"; }
         }
         
         string IMigrationMetadata.Source
