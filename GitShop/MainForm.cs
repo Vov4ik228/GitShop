@@ -72,6 +72,8 @@ namespace GitShop
                             myMenuStrip_Actions_Login.Enabled = false;
                             myMenuStrip_Actions_Registration.Enabled = false;
                             myMenuStrip_Actions_Exit.Enabled = true;
+                            UpdateProdcuts();
+                            UpdateUsers();
                         }
                         if (user.Role == "user")
                         {
@@ -82,6 +84,7 @@ namespace GitShop
                             myMenuStrip_Actions_Login.Enabled = false;
                             myMenuStrip_Actions_Registration.Enabled = false;
                             myMenuStrip_Actions_Exit.Enabled = true;
+                            UpdateProdcuts();
                         }
                     }
                     else
@@ -100,7 +103,31 @@ namespace GitShop
 
         private void myMenuStrip_Actions_Registration_Click(object sender, EventArgs e)
         {
+            RegistrationForm dlg = new RegistrationForm();
+            if (dlg.ShowDialog() == DialogResult.OK)
+            {
+                _context.Users.Add(new Entities.User() { Name = dlg.UserName, Password = dlg.UserPassword, Role = "user" });
+                myToolStrip_UserStatusInfo.Text = "You are successfully registered, now you can login !!!";
+                myToolStrip_UserStatusInfo.ForeColor = Color.Green;
+            }
+        }
 
+        public void UpdateUsers()
+        {
+            dgv_Users.Rows.Clear();
+            foreach (var item in _context.Users.ToList())
+            {
+                dgv_Users.Rows.Add(item.Id, item.Name, item.Password, item.Role);
+            }
+        }
+
+        public void UpdateProdcuts()
+        {
+            dgv_Products.Rows.Clear();
+            foreach (var item in _context.Prodcuts.ToList())
+            {
+                dgv_Products.Rows.Add(item.Id, item.Name, item.Category, item.Price);
+            }
         }
 
         private void myMenuStrip_Actions_Exit_Click(object sender, EventArgs e)

@@ -41,9 +41,10 @@
             this.lb_Name.AutoSize = true;
             this.lb_Name.Font = new System.Drawing.Font("Segoe Print", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.lb_Name.ForeColor = System.Drawing.Color.Navy;
-            this.lb_Name.Location = new System.Drawing.Point(12, 9);
+            this.lb_Name.Location = new System.Drawing.Point(16, 11);
+            this.lb_Name.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lb_Name.Name = "lb_Name";
-            this.lb_Name.Size = new System.Drawing.Size(70, 33);
+            this.lb_Name.Size = new System.Drawing.Size(88, 43);
             this.lb_Name.TabIndex = 0;
             this.lb_Name.Text = "Name";
             // 
@@ -52,27 +53,30 @@
             this.lb_Password.AutoSize = true;
             this.lb_Password.Font = new System.Drawing.Font("Segoe Print", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.lb_Password.ForeColor = System.Drawing.Color.Navy;
-            this.lb_Password.Location = new System.Drawing.Point(12, 61);
+            this.lb_Password.Location = new System.Drawing.Point(16, 75);
+            this.lb_Password.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lb_Password.Name = "lb_Password";
-            this.lb_Password.Size = new System.Drawing.Size(106, 33);
+            this.lb_Password.Size = new System.Drawing.Size(133, 43);
             this.lb_Password.TabIndex = 1;
             this.lb_Password.Text = "Password";
             // 
             // txt_Name
             // 
-            this.txt_Name.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.txt_Name.Location = new System.Drawing.Point(124, 9);
+            this.txt_Name.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.txt_Name.Location = new System.Drawing.Point(165, 11);
+            this.txt_Name.Margin = new System.Windows.Forms.Padding(4);
             this.txt_Name.Name = "txt_Name";
-            this.txt_Name.Size = new System.Drawing.Size(148, 26);
+            this.txt_Name.Size = new System.Drawing.Size(196, 38);
             this.txt_Name.TabIndex = 2;
             // 
             // txt_Password
             // 
-            this.txt_Password.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.txt_Password.Location = new System.Drawing.Point(124, 61);
+            this.txt_Password.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.txt_Password.Location = new System.Drawing.Point(165, 75);
+            this.txt_Password.Margin = new System.Windows.Forms.Padding(4);
             this.txt_Password.Name = "txt_Password";
             this.txt_Password.PasswordChar = '*';
-            this.txt_Password.Size = new System.Drawing.Size(148, 26);
+            this.txt_Password.Size = new System.Drawing.Size(196, 38);
             this.txt_Password.TabIndex = 3;
             // 
             // btn_Login
@@ -80,9 +84,10 @@
             this.btn_Login.BackColor = System.Drawing.Color.Navy;
             this.btn_Login.Font = new System.Drawing.Font("Segoe Print", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.btn_Login.ForeColor = System.Drawing.Color.Orange;
-            this.btn_Login.Location = new System.Drawing.Point(178, 111);
+            this.btn_Login.Location = new System.Drawing.Point(237, 137);
+            this.btn_Login.Margin = new System.Windows.Forms.Padding(4);
             this.btn_Login.Name = "btn_Login";
-            this.btn_Login.Size = new System.Drawing.Size(94, 37);
+            this.btn_Login.Size = new System.Drawing.Size(125, 46);
             this.btn_Login.TabIndex = 4;
             this.btn_Login.Text = "Sign in";
             this.btn_Login.UseVisualStyleBackColor = false;
@@ -93,9 +98,10 @@
             this.btn_Cencel.BackColor = System.Drawing.Color.Navy;
             this.btn_Cencel.Font = new System.Drawing.Font("Segoe Print", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.btn_Cencel.ForeColor = System.Drawing.Color.Orange;
-            this.btn_Cencel.Location = new System.Drawing.Point(18, 111);
+            this.btn_Cencel.Location = new System.Drawing.Point(24, 137);
+            this.btn_Cencel.Margin = new System.Windows.Forms.Padding(4);
             this.btn_Cencel.Name = "btn_Cencel";
-            this.btn_Cencel.Size = new System.Drawing.Size(94, 37);
+            this.btn_Cencel.Size = new System.Drawing.Size(125, 46);
             this.btn_Cencel.TabIndex = 5;
             this.btn_Cencel.Text = "Cencel";
             this.btn_Cencel.UseVisualStyleBackColor = false;
@@ -103,18 +109,19 @@
             // 
             // LoginForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Tan;
-            this.ClientSize = new System.Drawing.Size(284, 162);
+            this.ClientSize = new System.Drawing.Size(376, 188);
             this.Controls.Add(this.btn_Cencel);
             this.Controls.Add(this.btn_Login);
             this.Controls.Add(this.txt_Password);
             this.Controls.Add(this.txt_Name);
             this.Controls.Add(this.lb_Password);
             this.Controls.Add(this.lb_Name);
-            this.MaximumSize = new System.Drawing.Size(300, 200);
-            this.MinimumSize = new System.Drawing.Size(300, 200);
+            this.Margin = new System.Windows.Forms.Padding(4);
+            this.MaximumSize = new System.Drawing.Size(394, 235);
+            this.MinimumSize = new System.Drawing.Size(394, 235);
             this.Name = "LoginForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "LoginForm";
