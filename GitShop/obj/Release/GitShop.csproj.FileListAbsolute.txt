@@ -33,7 +33,6 @@ C:\Users\user.STEP.001\Desktop\GitShop\GitShop\GitShop\bin\Release\EntityFramewo
 C:\Users\user.STEP.001\Desktop\GitShop\GitShop\GitShop\bin\Release\EntityFramework.SqlServer.dll
 C:\Users\user.STEP.001\Desktop\GitShop\GitShop\GitShop\bin\Release\EntityFramework.xml
 C:\Users\user.STEP.001\Desktop\GitShop\GitShop\GitShop\bin\Release\EntityFramework.SqlServer.xml
-C:\Users\user.STEP.001\Desktop\GitShop\GitShop\GitShop\obj\Release\GitShop.csprojResolveAssemblyReference.cache
 C:\Users\user.STEP.001\Desktop\GitShop\GitShop\GitShop\obj\Release\GitShop.MainForm.resources
 C:\Users\user.STEP.001\Desktop\GitShop\GitShop\GitShop\obj\Release\GitShop.Properties.Resources.resources
 C:\Users\user.STEP.001\Desktop\GitShop\GitShop\GitShop\obj\Release\GitShop.csproj.GenerateResource.Cache
@@ -41,3 +40,5 @@ C:\Users\user.STEP.001\Desktop\GitShop\GitShop\GitShop\obj\Release\GitShop.cspro
 C:\Users\user.STEP.001\Desktop\GitShop\GitShop\GitShop\obj\Release\GitShop.exe
 C:\Users\user.STEP.001\Desktop\GitShop\GitShop\GitShop\obj\Release\GitShop.pdb
 C:\Users\user.STEP.001\Desktop\GitShop\GitShop\GitShop\obj\Release\GitShop.Migrations.Test.resources
+C:\Users\user.STEP.001\Desktop\GitShop\GitShop\GitShop\obj\Release\GitShop.LoginForm.resources
+C:\Users\user.STEP.001\Desktop\GitShop\GitShop\GitShop\obj\Release\GitShop.csprojResolveAssemblyReference.cache
