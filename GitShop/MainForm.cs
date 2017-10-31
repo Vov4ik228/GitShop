@@ -116,6 +116,7 @@ namespace GitShop
                     _context.SaveChanges();
                     myToolStrip_UserStatusInfo.Text = "You are successfully registered, now you can login !!!";
                     myToolStrip_UserStatusInfo.ForeColor = Color.Green;
+                    UpdateUsers();
                 }
                 catch
                 {
@@ -170,7 +171,27 @@ namespace GitShop
 
         private void btn_AddUser_Click(object sender, EventArgs e)
         {
-
+            RegistrationForm dlg = new RegistrationForm();
+            if (dlg.ShowDialog() == DialogResult.OK)
+            {
+                try
+                {
+                    Entities.User user = new Entities.User();
+                    user.Name = dlg.UserName;
+                    user.Password = dlg.UserPassword;
+                    user.Role = "user";
+                    _context.Users.Add(user);
+                    _context.SaveChanges();
+                    myToolStrip_UserStatusInfo.Text = $"You are successfully add {deletedUser.Role} {user.Name}";
+                    myToolStrip_UserStatusInfo.ForeColor = Color.Green;
+                    UpdateUsers();
+                }
+                catch
+                {
+                    myToolStrip_UserStatusInfo.Text = "Error registration !!!";
+                    myToolStrip_UserStatusInfo.ForeColor = Color.Red;
+                }
+            }
         }
 
         private void btn_DeleteUser_Click(object sender, EventArgs e)
@@ -185,7 +206,7 @@ namespace GitShop
                     _context.SaveChanges();
                     UpdateUsers();
 
-                    myToolStrip_UserStatusInfo.Text = $"You have successfully deleted {deletedUser.Name} !!!";
+                    myToolStrip_UserStatusInfo.Text = $"You have successfully deleted {deletedUser.Role} {deletedUser.Name} !!!";
                     myToolStrip_UserStatusInfo.ForeColor = Color.Green;
                 }
                 else
