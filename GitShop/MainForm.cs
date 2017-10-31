@@ -106,9 +106,22 @@ namespace GitShop
             RegistrationForm dlg = new RegistrationForm();
             if (dlg.ShowDialog() == DialogResult.OK)
             {
-                _context.Users.Add(new Entities.User() { Name = dlg.UserName, Password = dlg.UserPassword, Role = "user" });
-                myToolStrip_UserStatusInfo.Text = "You are successfully registered, now you can login !!!";
-                myToolStrip_UserStatusInfo.ForeColor = Color.Green;
+                try
+                {
+                    Entities.User user = new Entities.User();
+                    user.Name = dlg.UserName;
+                    user.Password = dlg.UserPassword;
+                    user.Role = "user";
+                    _context.Users.Add(user);
+                    _context.SaveChanges();
+                    myToolStrip_UserStatusInfo.Text = "You are successfully registered, now you can login !!!";
+                    myToolStrip_UserStatusInfo.ForeColor = Color.Green;
+                }
+                catch
+                {
+                    myToolStrip_UserStatusInfo.Text = "Error registration !!!";
+                    myToolStrip_UserStatusInfo.ForeColor = Color.Red;
+                }
             }
         }
 
@@ -153,6 +166,39 @@ namespace GitShop
             dgv_Users.Rows.Clear();
             IsLogged = false;
             user = null;
+        }
+
+        private void btn_AddUser_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btn_DeleteUser_Click(object sender, EventArgs e)
+        {
+            if (this.dgv_Users.SelectedRows.Count == 1)
+            {
+                int userId = Convert.ToInt32(this.dgv_Users.SelectedRows[0].Cells["UserId"].FormattedValue.ToString());
+                if (userId != user.Id)
+                {
+                    var deletedUser = _context.Users.First(u => u.Id == userId);
+                    _context.Users.Remove(deletedUser);
+                    _context.SaveChanges();
+                    UpdateUsers();
+
+                    myToolStrip_UserStatusInfo.Text = $"You have successfully deleted {deletedUser.Name} !!!";
+                    myToolStrip_UserStatusInfo.ForeColor = Color.Green;
+                }
+                else
+                {
+                    myToolStrip_UserStatusInfo.Text = "You can not remove yourself !!!";
+                    myToolStrip_UserStatusInfo.ForeColor = Color.Red;
+                }
+            }
+            else
+            {
+                myToolStrip_UserStatusInfo.Text = "Choose one deleted user !!!";
+                myToolStrip_UserStatusInfo.ForeColor = Color.Red;
+            }
         }
     }
 }
