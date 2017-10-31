@@ -52,6 +52,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AddProductForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddProductForm.Designer.cs">
+      <DependentUpon>AddProductForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Entities\EFContext.cs" />
     <Compile Include="Entities\Product.cs" />
     <Compile Include="Entities\User.cs" />
@@ -71,6 +77,10 @@
     <Compile Include="Migrations\201710301427571_Test.Designer.cs">
       <DependentUpon>201710301427571_Test.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201710311343002_Finaly.cs" />
+    <Compile Include="Migrations\201710311343002_Finaly.Designer.cs">
+      <DependentUpon>201710311343002_Finaly.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -80,6 +90,9 @@
     <Compile Include="RegistrationForm.Designer.cs">
       <DependentUpon>RegistrationForm.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="AddProductForm.resx">
+      <DependentUpon>AddProductForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="LoginForm.resx">
       <DependentUpon>LoginForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -88,6 +101,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201710301427571_Test.resx">
       <DependentUpon>201710301427571_Test.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201710311343002_Finaly.resx">
+      <DependentUpon>201710311343002_Finaly.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

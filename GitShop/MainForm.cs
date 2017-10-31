@@ -108,11 +108,11 @@ namespace GitShop
             {
                 try
                 {
-                    Entities.User user = new Entities.User();
-                    user.Name = dlg.UserName;
-                    user.Password = dlg.UserPassword;
-                    user.Role = "user";
-                    _context.Users.Add(user);
+                    Entities.User addUser = new Entities.User();
+                    addUser.Name = dlg.UserName;
+                    addUser.Password = dlg.UserPassword;
+                    addUser.Role = "user";
+                    _context.Users.Add(addUser);
                     _context.SaveChanges();
                     myToolStrip_UserStatusInfo.Text = "You are successfully registered, now you can login !!!";
                     myToolStrip_UserStatusInfo.ForeColor = Color.Green;
@@ -176,13 +176,13 @@ namespace GitShop
             {
                 try
                 {
-                    Entities.User user = new Entities.User();
-                    user.Name = dlg.UserName;
-                    user.Password = dlg.UserPassword;
-                    user.Role = "user";
-                    _context.Users.Add(user);
+                    Entities.User addUser = new Entities.User();
+                    addUser.Name = dlg.UserName;
+                    addUser.Password = dlg.UserPassword;
+                    addUser.Role = "user";
+                    _context.Users.Add(addUser);
                     _context.SaveChanges();
-                    myToolStrip_UserStatusInfo.Text = $"You are successfully add {deletedUser.Role} {user.Name}";
+                    myToolStrip_UserStatusInfo.Text = $"You are successfully add {addUser.Role} {addUser.Name}";
                     myToolStrip_UserStatusInfo.ForeColor = Color.Green;
                     UpdateUsers();
                 }
@@ -219,6 +219,32 @@ namespace GitShop
             {
                 myToolStrip_UserStatusInfo.Text = "Choose one deleted user !!!";
                 myToolStrip_UserStatusInfo.ForeColor = Color.Red;
+            }
+        }
+
+        private void btn_AddProduct_Click(object sender, EventArgs e)
+        {
+            AddProductForm dlg = new AddProductForm();
+            if (dlg.ShowDialog() == DialogResult.OK)
+            {
+                try
+                {
+                    Entities.Product addProduct = new Entities.Product();
+                    addProduct.Name = dlg.ProductName;
+                    addProduct.Category = dlg.ProductCategory;
+                    addProduct.Price = dlg.ProductPrice;
+                    addProduct.UserId = user.Id;
+                    _context.Prodcuts.Add(addProduct);
+                    _context.SaveChanges();
+                    myToolStrip_UserStatusInfo.Text = $"You are successfully add prodcut {addProduct.Name}";
+                    myToolStrip_UserStatusInfo.ForeColor = Color.Green;
+                    UpdateProdcuts();
+                }
+                catch
+                {
+                    myToolStrip_UserStatusInfo.Text = "Error add prodcut !!!";
+                    myToolStrip_UserStatusInfo.ForeColor = Color.Red;
+                }
             }
         }
     }

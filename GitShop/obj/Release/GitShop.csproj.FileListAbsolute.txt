@@ -59,3 +59,5 @@ C:\Users\user.STEP.001\Desktop\GitShop\GitShop\obj\Release\GitShop.csproj.Genera
 C:\Users\user.STEP.001\Desktop\GitShop\GitShop\obj\Release\GitShop.csproj.CoreCompileInputs.cache
 C:\Users\user.STEP.001\Desktop\GitShop\GitShop\obj\Release\GitShop.exe
 C:\Users\user.STEP.001\Desktop\GitShop\GitShop\obj\Release\GitShop.pdb
+C:\Users\user.STEP.001\Desktop\GitShop\GitShop\obj\Release\GitShop.AddProductForm.resources
+C:\Users\user.STEP.001\Desktop\GitShop\GitShop\obj\Release\GitShop.Migrations.Finaly.resources

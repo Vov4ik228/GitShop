@@ -123,7 +123,7 @@
             this.myTabControl.Dock = System.Windows.Forms.DockStyle.Fill;
             this.myTabControl.Font = new System.Drawing.Font("Segoe Print", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.myTabControl.Location = new System.Drawing.Point(0, 41);
-            this.myTabControl.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.myTabControl.Margin = new System.Windows.Forms.Padding(2);
             this.myTabControl.Name = "myTabControl";
             this.myTabControl.SelectedIndex = 0;
             this.myTabControl.Size = new System.Drawing.Size(638, 298);
@@ -137,9 +137,9 @@
             this.myTabControl_UsersPage.Controls.Add(this.btn_AddUser);
             this.myTabControl_UsersPage.Controls.Add(this.dgv_Users);
             this.myTabControl_UsersPage.Location = new System.Drawing.Point(4, 33);
-            this.myTabControl_UsersPage.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.myTabControl_UsersPage.Margin = new System.Windows.Forms.Padding(2);
             this.myTabControl_UsersPage.Name = "myTabControl_UsersPage";
-            this.myTabControl_UsersPage.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.myTabControl_UsersPage.Padding = new System.Windows.Forms.Padding(2);
             this.myTabControl_UsersPage.Size = new System.Drawing.Size(630, 261);
             this.myTabControl_UsersPage.TabIndex = 0;
             this.myTabControl_UsersPage.Text = "Users";
@@ -149,7 +149,7 @@
             this.btn_ChangeUser.BackColor = System.Drawing.Color.Navy;
             this.btn_ChangeUser.ForeColor = System.Drawing.Color.Orange;
             this.btn_ChangeUser.Location = new System.Drawing.Point(482, 167);
-            this.btn_ChangeUser.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btn_ChangeUser.Margin = new System.Windows.Forms.Padding(2);
             this.btn_ChangeUser.Name = "btn_ChangeUser";
             this.btn_ChangeUser.Size = new System.Drawing.Size(144, 57);
             this.btn_ChangeUser.TabIndex = 7;
@@ -161,7 +161,7 @@
             this.btn_DeleteUser.BackColor = System.Drawing.Color.Navy;
             this.btn_DeleteUser.ForeColor = System.Drawing.Color.Orange;
             this.btn_DeleteUser.Location = new System.Drawing.Point(482, 86);
-            this.btn_DeleteUser.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btn_DeleteUser.Margin = new System.Windows.Forms.Padding(2);
             this.btn_DeleteUser.Name = "btn_DeleteUser";
             this.btn_DeleteUser.Size = new System.Drawing.Size(144, 57);
             this.btn_DeleteUser.TabIndex = 6;
@@ -174,7 +174,7 @@
             this.btn_AddUser.BackColor = System.Drawing.Color.Navy;
             this.btn_AddUser.ForeColor = System.Drawing.Color.Orange;
             this.btn_AddUser.Location = new System.Drawing.Point(482, 5);
-            this.btn_AddUser.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btn_AddUser.Margin = new System.Windows.Forms.Padding(2);
             this.btn_AddUser.Name = "btn_AddUser";
             this.btn_AddUser.Size = new System.Drawing.Size(144, 57);
             this.btn_AddUser.TabIndex = 5;
@@ -192,7 +192,7 @@
             this.UserPassword,
             this.UserRole});
             this.dgv_Users.Location = new System.Drawing.Point(6, 5);
-            this.dgv_Users.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dgv_Users.Margin = new System.Windows.Forms.Padding(2);
             this.dgv_Users.Name = "dgv_Users";
             this.dgv_Users.RowTemplate.Height = 24;
             this.dgv_Users.Size = new System.Drawing.Size(459, 219);
@@ -230,9 +230,9 @@
             this.myTabControl_ProductsPage.Controls.Add(this.btn_AddProduct);
             this.myTabControl_ProductsPage.Controls.Add(this.dgv_Products);
             this.myTabControl_ProductsPage.Location = new System.Drawing.Point(4, 33);
-            this.myTabControl_ProductsPage.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.myTabControl_ProductsPage.Margin = new System.Windows.Forms.Padding(2);
             this.myTabControl_ProductsPage.Name = "myTabControl_ProductsPage";
-            this.myTabControl_ProductsPage.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.myTabControl_ProductsPage.Padding = new System.Windows.Forms.Padding(2);
             this.myTabControl_ProductsPage.Size = new System.Drawing.Size(630, 261);
             this.myTabControl_ProductsPage.TabIndex = 1;
             this.myTabControl_ProductsPage.Text = "Products";
@@ -242,7 +242,7 @@
             this.btn_ChangeProduct.BackColor = System.Drawing.Color.Navy;
             this.btn_ChangeProduct.ForeColor = System.Drawing.Color.DarkOrange;
             this.btn_ChangeProduct.Location = new System.Drawing.Point(482, 167);
-            this.btn_ChangeProduct.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btn_ChangeProduct.Margin = new System.Windows.Forms.Padding(2);
             this.btn_ChangeProduct.Name = "btn_ChangeProduct";
             this.btn_ChangeProduct.Size = new System.Drawing.Size(144, 57);
             this.btn_ChangeProduct.TabIndex = 11;
@@ -254,7 +254,7 @@
             this.btn_DeleteProduct.BackColor = System.Drawing.Color.Navy;
             this.btn_DeleteProduct.ForeColor = System.Drawing.Color.DarkOrange;
             this.btn_DeleteProduct.Location = new System.Drawing.Point(482, 86);
-            this.btn_DeleteProduct.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btn_DeleteProduct.Margin = new System.Windows.Forms.Padding(2);
             this.btn_DeleteProduct.Name = "btn_DeleteProduct";
             this.btn_DeleteProduct.Size = new System.Drawing.Size(144, 57);
             this.btn_DeleteProduct.TabIndex = 10;
@@ -266,12 +266,13 @@
             this.btn_AddProduct.BackColor = System.Drawing.Color.Navy;
             this.btn_AddProduct.ForeColor = System.Drawing.Color.DarkOrange;
             this.btn_AddProduct.Location = new System.Drawing.Point(482, 5);
-            this.btn_AddProduct.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btn_AddProduct.Margin = new System.Windows.Forms.Padding(2);
             this.btn_AddProduct.Name = "btn_AddProduct";
             this.btn_AddProduct.Size = new System.Drawing.Size(144, 57);
             this.btn_AddProduct.TabIndex = 9;
             this.btn_AddProduct.Text = "Add product";
             this.btn_AddProduct.UseVisualStyleBackColor = false;
+            this.btn_AddProduct.Click += new System.EventHandler(this.btn_AddProduct_Click);
             // 
             // dgv_Products
             // 
@@ -283,7 +284,7 @@
             this.ProductCategory,
             this.ProdcutPrice});
             this.dgv_Products.Location = new System.Drawing.Point(6, 5);
-            this.dgv_Products.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dgv_Products.Margin = new System.Windows.Forms.Padding(2);
             this.dgv_Products.Name = "dgv_Products";
             this.dgv_Products.RowTemplate.Height = 24;
             this.dgv_Products.Size = new System.Drawing.Size(459, 219);
@@ -352,7 +353,7 @@
             this.Controls.Add(this.myTabControl);
             this.Controls.Add(this.myMenuStrip);
             this.MainMenuStrip = this.myMenuStrip;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "MainForm";
             this.Text = "Shop";
             this.myMenuStrip.ResumeLayout(false);

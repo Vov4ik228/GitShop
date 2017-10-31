@@ -21,6 +21,8 @@ namespace GitShop.Entities
         [Required, StringLength(maximumLength: 256)]
         public string Price { get; set; }
 
+        public int UserId { get; set; }
+
         public User User { get; set; }
     }
 }
